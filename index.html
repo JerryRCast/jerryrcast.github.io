@@ -5,36 +5,217 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
-    <title>Hello, world!</title>
+    <title>Gerardo Ríos CV</title>
+    
+    <style>
+      body{
+        background: rgba(145,119,199,1);
+        background: -moz-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(145,119,199,1)), color-stop(40%, rgba(102,41,171,1)), color-stop(74%, rgba(105,0,75,1)), color-stop(100%, rgba(79,0,53,1)));
+        background: -webkit-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        background: -o-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        background: -ms-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        background: linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9177c7', endColorstr='#4f0035', GradientType=1 );
+      }
+    </style>
   </head>
   <body>
-    <div class="card">
-      <div class="card-header bg-dark">
-        <h2 class="text-center text-primary display-4 mt-5">Hola! Soy Gerardo Ríos</h2>
-        <h4 class="text-center text-primary display-4 mt-5">Hello! I'm Gerardo Ríos</h4>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        // Abstract Type Selector
+        $('#abstractBtn').on('click',function(){
+          var h = $(window).height();
+          var w = $(window).width();
+          if(w <= 768){
+            $('#abstractBtn').attr('data-toggle','modal')
+            $('#abstractBtn').attr('data-target','#abstractModal')
+          }
+          else{
+            $('#abstractBtn').attr('data-toggle','collapse')
+            $('#abstractBtn').attr('data-target','#abstract')
+          }
+        });          
+      });
+    </script>
+    <div class="container" style="opacity: 1;">
+      <!-- Header -->
+      <div id="Header" class="container bg-dark" style="border-top-left-radius: 5px; border-top-right-radius: 5px;">        
+        <div class="row mt-5">   
+          <div class="col-sm-4">
+            <div class="card mt-4 mb-2 bg-secondary">
+              <img class="card-img-top" src="#" alt="Card image">
+              <div class="card-body">
+                <!-- Presentation/Presentación -->
+                <h6 class="card-title text-justify text-white mt-2"><strong>Hola! Me dicen Jerry</strong></h6>
+                <!-- Abstract Button/Botón de Resumen -->
+                <button id="abstractBtn" type="button" class="btn btn-dark" data-toggle="collapse" data-target="#abstract">Ver Resumen</button>
+              </div>                         
+            </div>
+          </div> 
+          <!-- General Data/Datos Generales -->
+          <div class="col-sm-8">
+            <div class="bg-dark">
+              <p class="text-justify text-white mt-5 mb-1"><strong>Datos Generales</strong></p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-dark text-white"><i class="fa fa-user"></i> Nombre. &nbsp; Gerardo Iván Ríos Castillo</li>
+                <li class="list-group-item bg-dark text-white"><i class="fa fa-map-marker"></i> Dirección. &nbsp; México, Tecámac, Villa del Real, C.P. 55749, Mónaco No. 30</li>
+                <li class="list-group-item bg-dark text-white"><i class="fa fa-phone"></i> Telefono. &nbsp; 55 1383 8910</li>
+                <li class="list-group-item bg-dark text-white"><i class="fa fa-mobile"></i> Celular. &nbsp; 55 2403 2818</li>
+                <li class="list-group-item bg-dark text-white"><i class="fa fa-envelope"></i> Email. &nbsp; gerardo.rios0194@gmail.com</li>
+              </ul>
+              <!-- Abstract Content/Contendido del Resumen -->
+              <div id="abstract" class="collapse mb-1">
+                <p class="text-justify text-white"><strong>Resumen</strong></p>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item bg-dark text-white">
+                    <p class="text-justify">
+                      3 años (y contando...) de experiencia desarrollando en C# y ASP.NET, Conocimientos en otros 
+                      lenguajes de programación como Java, C/C++, Shell(Bash); conocimiento, creación y uso de
+                      Bases de Datos en SQL; desarrollo tanto Front-end como Back-end usando frameworks como Bootstrap
+                      y Materiallize, y tecnologías como JQuery y Ajax.
+                    </p>
+                    <p class="text-justify">
+                      También estuve inmerso en el desarrollo de software para la certificación de Prestadores de 
+                      Servicios de Certificación (PSC) emitida por la Secretaría de Economía, tomando parte como uno 
+                      de los desarrolladores principales de los servicios y de la línea de negocio.
+                    </p>
+                    <p class="text-justify">
+                      Tengo la ideología de que no importa en que lenguaje de programación te encuentres, todos 
+                      son iguales mientras sigas una lógica de programación. Por lo anterior, cada que me preguntan: 
+                      "¿En qué lenguajes sabes programar?" Yo puedo contestarles: "En cualquiera".
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <!-- Abstract Modal Content/Contenido 'Modal' del Resumen -->
+              <!-- The Modal -->
+              <div id="abstractModal" class="modal fade" style="opacity: 0.8;">
+                <div class="modal-dialog">
+                  <div class="modal-content text-white text-justify bg-secondary">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">Resumen</h4>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <p class="text-justify">
+                        3 años (y contando...) de experiencia desarrollando en C# y ASP.NET, Conocimientos en otros 
+                        lenguajes de programación como Java, C/C++, Shell(Bash); conocimiento, creación y uso de
+                        Bases de Datos en SQL; desarrollo tanto Front-end como Back-end usando frameworks como Bootstrap
+                        y Materiallize, y tecnologías como JQuery y Ajax.
+                      </p>
+                      <p class="text-justify">
+                        También estuve inmerso en el desarrollo de software para la certificación de Prestadores de 
+                        Servicios de Certificación (PSC) emitida por la Secretaría de Economía, tomando parte como uno 
+                        de los desarrolladores principales de los servicios y de la línea de negocio.
+                      </p>
+                      <p class="text-justify">
+                        Tengo la ideología de que no importa en que lenguaje de programación te encuentres, todos 
+                        son iguales mientras sigas una lógica de programación. Por lo anterior, cada que me preguntan: 
+                        "¿En qué lenguajes sabes programar?" Yo puedo contestarles: "En cualquiera".
+                      </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>                      
+          </div>
+        </div>        
       </div>
-      <div class="card-body bg-light">Content</div>
-      <div class="card-footer bg-dark">
-        <br>
-        <div class="container.fluid bg-secondary">
-          <p class="text">Soy un footer</p>
+      <!-- Body/Content -->
+      <div id="Content" class="container bg-dark">
+        <h6 class="text-white ml-3"><strong>Historia Laboral</strong></h6>
+        <hr style="border-top-width: 4px;">
+        <div class="row mt-5">   
+          <div class="col-sm-4">
+            <p class="text-justify text-white ml-3 mt-5">De Noviembre 2015 - Noviembre 2017 </p>
+          </div>
+          <div class="col-sm-4">
+            <p class="text-justify text-white">
+              <strong>Premium Restaurant Brands (PRB)<br>Becario de Desarrollo</strong>
+            </p>
+            <hr style="border-top-width: 2px;">
+            <p class="text-justify text-white">
+              Desarrollo de scripts en Bash, C y Java para la automatización de tareas como la configuración 
+              de routers, validación de tickets, comunicación entre Hardware y Software. 
+            </p>
+            <p class="text-justify text-white">
+              Generar documentación de programas y realizar las guías de instalación de los equipos usados en 
+              diversas sucursales.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <p class="text-justify text-white">De Noviembre 2015 - Noviembre 2017 </p>
+          </div>
+        </div>        
+        <h6 class="text-white ml-3"><strong>Formación</strong></h6>
+        <hr style="border-top-width: 4px;">
+        <div class="row mt-5">   
+          <div class="col-sm-4">
+
+          </div>
+          <div class="col-sm-8">
+            
+          </div>
         </div>
-        <br>
+        <h6 class="text-white ml-3"><strong>Otra Formación</strong></h6>
+        <hr style="border-top-width: 4px;">
+        <div class="row mt-5">   
+          <div class="col-sm-4">
+
+          </div>
+          <div class="col-sm-8">
+            
+          </div>
+        </div>
+        <h6 class="text-white ml-3"><strong>Aptitudes</strong></h6>
+        <hr style="border-top-width: 4px;">
+        <div class="row mt-5">   
+          <div class="col-sm-4">
+
+          </div>
+          <div class="col-sm-8">
+            
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div id="Footer" class="container bg-dark" style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+        <div class="bg-secondary">
+          <p class="text-white">Soy un footer</p>
+        </div>
+        <p class="text-white text-center">Designed by Gerardo Ríos | Powered by Gerardo Ríos, Bootstrap4 & GitHubPages | <i class="fa fa-copyright"></i> 2021</p>
+      </div>
+      <div class="card-footer bg-dark">
+        <div class="card-group">
+          <div class="card bg-primary">
+            <div class="card-body text-center">
+              <p class="card-text">Some text inside the first card</p>
+            </div>
+          </div>
+          <div class="card bg-warning">
+            <div class="card-body text-center">
+              <p class="card-text">Some text inside the second card</p>
+            </div>
+          </div>
+          <div class="card bg-success">
+            <div class="card-body text-center">
+              <p class="card-text">Some text inside the third card</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
