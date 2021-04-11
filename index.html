@@ -24,6 +24,26 @@
         background: linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9177c7', endColorstr='#4f0035', GradientType=1 );
       }
+      hr.gradient-full {
+        border: 0; height: 2px; text-align: center;
+        background-image: -moz-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%); 
+        background-image: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(145,119,199,1)), color-stop(40%, rgba(102,41,171,1)), color-stop(74%, rgba(105,0,75,1)), color-stop(100%, rgba(79,0,53,1)));
+        background-image: -webkit-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        background-image: -o-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        background-image: -ms-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        background-image: linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9177c7', endColorstr='#4f0035', GradientType=1 );
+      }
+      hr.gradient-70 {
+        border: 0; height: 1px; width: 70%;
+        background-image: -moz-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%); 
+        background-image: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(145,119,199,1)), color-stop(40%, rgba(102,41,171,1)), color-stop(74%, rgba(105,0,75,1)), color-stop(100%, rgba(79,0,53,1)));
+        background-image: -webkit-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        background-image: -o-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        background-image: -ms-linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        background-image: linear-gradient(45deg, rgba(145,119,199,1) 0%, rgba(102,41,171,1) 40%, rgba(105,0,75,1) 74%, rgba(79,0,53,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9177c7', endColorstr='#4f0035', GradientType=1 );
+      }  
     </style>
   </head>
   <body>
@@ -41,7 +61,14 @@
             $('#abstractBtn').attr('data-toggle','collapse')
             $('#abstractBtn').attr('data-target','#abstract')
           }
-        });          
+        });
+        // Margin Top Selector
+        if($(window).width() <= 768){
+          $('.mt-sel').removeClass('mt-5')
+        }
+        else if($(window).width() > 768 && !$('.mt-sel').hasClass('mt-5')){
+          alert('Me quitaron mi clase u.u');
+        }  
       });
     </script>
     <div class="container" style="opacity: 1;">
@@ -64,9 +91,7 @@
             <div class="bg-dark">
               <p class="text-justify text-white mt-5 mb-1"><strong>Datos Generales</strong></p>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item bg-dark text-white"><i class="fa fa-user"></i> Nombre. &nbsp; Gerardo Iván Ríos Castillo</li>
-                <li class="list-group-item bg-dark text-white"><i class="fa fa-map-marker"></i> Dirección. &nbsp; México, Tecámac, Villa del Real, C.P. 55749, Mónaco No. 30</li>
-                <li class="list-group-item bg-dark text-white"><i class="fa fa-phone"></i> Telefono. &nbsp; 55 1383 8910</li>
+                <li class="list-group-item bg-dark text-white"><i class="fa fa-user"></i> Nombre. &nbsp; Gerardo Iván Ríos Castillo</li>              
                 <li class="list-group-item bg-dark text-white"><i class="fa fa-mobile"></i> Celular. &nbsp; 55 2403 2818</li>
                 <li class="list-group-item bg-dark text-white"><i class="fa fa-envelope"></i> Email. &nbsp; gerardo.rios0194@gmail.com</li>
               </ul>
@@ -135,17 +160,20 @@
       </div>
       <!-- Body/Content -->
       <div id="Content" class="container bg-dark">
-        <h6 class="text-white ml-3"><strong>Historia Laboral</strong></h6>
-        <hr style="border-top-width: 4px;">
-        <div class="row mt-5">   
-          <div class="col-sm-4">
-            <p class="text-justify text-white ml-3 mt-5">De Noviembre 2015 - Noviembre 2017 </p>
+        <br>
+        <h6 class="text-white "><strong>Historia Laboral</strong></h6>
+        <hr class="gradient-full"> 
+        <div class="row">   
+          <div class="col-sm-2">
+            <p class="text-center text-white mt-5 mt-sel">De Noviembre 2015 - Noviembre 2017 </p>
           </div>
           <div class="col-sm-4">
+            <p class="text-center text-white mt-5 mt-sel">CDMX, Alcaldía de Cuajimalpa</p>
+          </div>
+          <div class="col-sm-6">
             <p class="text-justify text-white">
-              <strong>Premium Restaurant Brands (PRB)<br>Becario de Desarrollo</strong>
+              <strong class="text-secondary">Premium Restaurant Brands (PRB)<br>Becario de Desarrollo</strong>
             </p>
-            <hr style="border-top-width: 2px;">
             <p class="text-justify text-white">
               Desarrollo de scripts en Bash, C y Java para la automatización de tareas como la configuración 
               de routers, validación de tickets, comunicación entre Hardware y Software. 
@@ -154,67 +182,159 @@
               Generar documentación de programas y realizar las guías de instalación de los equipos usados en 
               diversas sucursales.
             </p>
+          </div>                   
+        </div>
+        <hr class="gradient-70">
+        <div class="row">   
+          <div class="col-sm-2">
+            <p class="text-center text-white mt-5 mt-sel">De Diciembre 2017 - Actualidad </p>
           </div>
           <div class="col-sm-4">
-            <p class="text-justify text-white">De Noviembre 2015 - Noviembre 2017 </p>
+            <p class="text-center text-white mt-5 mt-sel">CDMX, Alcaldía de Cuauhtémoc</p>
           </div>
-        </div>        
-        <h6 class="text-white ml-3"><strong>Formación</strong></h6>
-        <hr style="border-top-width: 4px;">
-        <div class="row mt-5">   
-          <div class="col-sm-4">
-
-          </div>
-          <div class="col-sm-8">
-            
+          <div class="col-sm-6">
+            <p class="text-justify text-white">
+              <strong class="text-secondary">ATEB Servicios S.A. de C.V.<br>Desarrollador</strong>
+            </p>
+            <p class="text-justify text-white">
+              Desarrollo de scripts en Bash, C y Java para la automatización de tareas como la configuración 
+              de routers, validación de tickets, comunicación entre Hardware y Software. 
+            </p>
+            <p class="text-justify text-white">
+              Generar documentación de programas y realizar las guías de instalación de los equipos usados en 
+              diversas sucursales.
+            </p>
+          </div>                   
+        </div>
+        <br>     
+        <h6 class="text-white "><strong>Formación</strong></h6>
+        <hr class="gradient-full">
+        <div class="row">   
+          <div class="col-sm-2"></div>
+          <div class="col-sm-10">
+            <p class="text-justify text-secondary"><strong>Universidad Tecnológica de México (Unitec), Campus Ecatepec</strong></p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-cog fa-spin fa-fw"></i> Ingeniería en Sistemas Computacionales (ISC)</p>
+              </li>
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-cog fa-spin fa-fw"></i> Maestría en Dirección de Proyectos</p>
+              </li>
+            </ul>
           </div>
         </div>
-        <h6 class="text-white ml-3"><strong>Otra Formación</strong></h6>
-        <hr style="border-top-width: 4px;">
-        <div class="row mt-5">   
-          <div class="col-sm-4">
-
-          </div>
-          <div class="col-sm-8">
-            
+        <h6 class="text-white "><strong>Otra Formación</strong></h6>
+        <hr class="gradient-full">
+        <div class="row">   
+          <div class="col-sm-2"></div>
+          <div class="col-sm-10">
+            <p class="text-justify text-secondary"><strong>Colegio Nacional de Matemáticas (Conamat), Campus Ecatepec</strong></p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-cog fa-spin fa-fw"></i> Diplomado de Matemáticas</p>
+              </li>
+            </ul>
           </div>
         </div>
-        <h6 class="text-white ml-3"><strong>Aptitudes</strong></h6>
-        <hr style="border-top-width: 4px;">
-        <div class="row mt-5">   
-          <div class="col-sm-4">
-
+        <div class="row">   
+          <div class="col-sm-2"></div>
+          <div class="col-sm-10">
+            <p class="text-justify text-secondary"><strong>Cambridge English Language Assesment</strong></p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-cog fa-spin fa-fw"></i> Certificación PET</p>
+              </li>
+            </ul>
           </div>
-          <div class="col-sm-8">
-            
+        </div>
+        <div class="row">   
+          <div class="col-sm-2"></div>
+          <div class="col-sm-10">
+            <p class="text-justify text-secondary"><strong>Cisco Networking Academy</strong></p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-dark text-white">
+                <ul class="list-group list-group-flush">
+                  <p class="text-justify"><i class="fa fa-cog fa-spin fa-fw"></i> Cursos CCNA</p>
+                  <li class="list-group-item bg-dark text-white">
+                    <p class="text-justify"><i class="fa fa-hand-o-right"></i> CCNA Routing and Switching: Introducción a las redes</p>
+                  </li>
+                  <li class="list-group-item bg-dark text-white">
+                    <p class="text-justify"><i class="fa fa-hand-o-right"></i> CCNA Routing and Switching: Principios Básicos de Routing y Switching</p>
+                  </li>
+                  <li class="list-group-item bg-dark text-white">
+                    <p class="text-justify"><i class="fa fa-hand-o-right"></i> CCNA Routing and Switching: Escalamiento de redes</p>
+                  </li>
+                  <li class="list-group-item bg-dark text-white">
+                    <p class="text-justify"><i class="fa fa-hand-o-right"></i> CCNA Routing and Switching: Conexión de redes</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h6 class="text-white "><strong>Aptitudes</strong></h6>
+        <hr class="gradient-full">
+        <div class="row">   
+          <div class="col-sm-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-hand-o-right"></i>
+                  Desarrollo Web usando CSS3, y HTML5, JavaScript (JQuery).
+                </p>
+              </li>
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-hand-o-right"></i>
+                  Uso de Frameworks como Materialize y Bootstrap.
+                </p>
+              </li>
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-hand-o-right"></i>
+                  Programación en C/C++, .Net, Java, Php, Bash y JavaScript.
+                </p>
+              </li>
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-hand-o-right"></i>
+                  Uso de SQL Server.
+                </p>
+              </li>
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-hand-o-right"></i>
+                  Creación de WebServices a través de .Net con conexión a SQLServer.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-hand-o-right"></i>
+                  Creación y gestión de bases de datos.
+                </p>
+              </li>
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-hand-o-right"></i>
+                  Rápido aprendizaje y adaptación
+                </p>
+              </li>
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-hand-o-right"></i>
+                  Creativo y meticuloso en detalles
+                </p>
+              </li>
+              <li class="list-group-item bg-dark text-white">
+                <p class="text-justify"><i class="fa fa-hand-o-right"></i>
+                  Análisis y resolución de problemas.
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
       <!-- Footer -->
-      <div id="Footer" class="container bg-dark" style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
-        <div class="bg-secondary">
-          <p class="text-white">Soy un footer</p>
-        </div>
-        <p class="text-white text-center">Designed by Gerardo Ríos | Powered by Gerardo Ríos, Bootstrap4 & GitHubPages | <i class="fa fa-copyright"></i> 2021</p>
-      </div>
-      <div class="card-footer bg-dark">
-        <div class="card-group">
-          <div class="card bg-primary">
-            <div class="card-body text-center">
-              <p class="card-text">Some text inside the first card</p>
-            </div>
-          </div>
-          <div class="card bg-warning">
-            <div class="card-body text-center">
-              <p class="card-text">Some text inside the second card</p>
-            </div>
-          </div>
-          <div class="card bg-success">
-            <div class="card-body text-center">
-              <p class="card-text">Some text inside the third card</p>
-            </div>
-          </div>
-        </div>
+      <div id="Footer" class="container.fluid bg-dark mb-2" style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+        <div class="bg-secondary mb-2" style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+          <p class="text-white text-center"><i class="fa fa-copyright"></i> 2021 Designed by Gerardo Ríos | Powered by Bootstrap4 & GitHubPages</p>
+        </div>        
       </div>
     </div>
   </body>
